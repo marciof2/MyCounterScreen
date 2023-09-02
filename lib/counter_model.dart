@@ -16,4 +16,8 @@ class CounterModel {
   void resetCounter() {
     _counter = 0;
   }
+
+  void modifierCounter(int valor, Function(int, int) operation) {
+    _counter = operation(valor, _counter);
+  }
 }

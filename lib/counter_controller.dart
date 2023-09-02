@@ -8,14 +8,22 @@ class CounterController {
   }
 
   void incrementCounter() {
-    model.addCounter();
+    model.modifierCounter(1, add);
   }
 
   void subCounter() {
-    model.subCounter();
+    model.modifierCounter(1, minus);
   }
 
   void resetCounte() {
     model.resetCounter();
+  }
+
+  add(int numb1, int numb2) {
+    return numb1 + numb2;
+  }
+
+  minus(int num1, int num2) {
+    return num1 - num2;
   }
 }
